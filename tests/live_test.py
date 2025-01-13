@@ -61,9 +61,9 @@ async def cache_expires() -> dict[str, Union[bool, str]]:
 
 @app.get("/cache_json_encoder")
 @cache(tag="test_tag_1")
-def cache_json_encoder() -> (
-    dict[str, Union[bool, str, datetime, date, Decimal]]
-):
+def cache_json_encoder() -> dict[
+    str, Union[bool, str, datetime, date, Decimal]
+]:
     """Route that returns a dictionary with different data types.
 
     This has the default cache time of 1 year.

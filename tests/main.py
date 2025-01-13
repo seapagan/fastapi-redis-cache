@@ -33,9 +33,9 @@ async def cache_expires() -> dict[str, Union[bool, str]]:
 
 @app.get("/cache_json_encoder")
 @cache()
-def cache_json_encoder() -> (
-    dict[str, Union[bool, str, datetime, date, Decimal]]
-):
+def cache_json_encoder() -> dict[
+    str, Union[bool, str, datetime, date, Decimal]
+]:
     """Route that returns a dictionary with different data types."""
     return {
         "success": True,
